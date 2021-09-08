@@ -1,4 +1,4 @@
-# jb-bankterminal-main
+# jb-bankterminal
 Copyright (C) 2021 Jeffrey Bostoen
 
 [![License](https://img.shields.io/github/license/jbostoen/iTop-custom-extensions)](https://github.com/jbostoen/iTop-custom-extensions/blob/master/license.md)
