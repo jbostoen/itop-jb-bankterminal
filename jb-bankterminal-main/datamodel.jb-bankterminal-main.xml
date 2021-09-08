@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.6">
+	<!-- 
+ * @copyright   Copyright (C) 2021 Jeffrey Bostoen
+ * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
+-->
+	<classes>
+		<class id="Model">
+			<fields>
+				<field id="type" xsi:type="AttributeEnum">
+					<values>
+						<value id="BankTerminal" _delta="define">BankTerminal</value>
+					</values>
+				</field>
+			</fields>
+		</class>
+		<class id="BankTerminal" _delta="define">
+			<parent>ConnectableCI</parent>
+			<properties>
+				<category>bizmodel,searchable,structure</category>
+				<abstract>false</abstract>
+				<key_type>autoincrement</key_type>
+				<db_table>bankterminal</db_table>
+				<db_key_field>id</db_key_field>
+				<naming>
+					<attributes>
+						<attribute id="name"/>
+					</attributes>
+				</naming>
+				<order>
+					<columns>
+						<column id="name" ascending="true"/>
+					</columns>
+				</order>
+				<reconciliation>
+					<attributes>
+						<attribute id="name"/>
+					</attributes>
+				</reconciliation>
+				<icon>images/bankterminal.png</icon>
+			</properties>
+			<fields/>
+			<methods/>
+			<!-- Not simply inherited, since otherwise it can not be refined for TeemIP. -->
+            <presentation>
+              <details>
+                <items>
+                  <item id="name">
+                    <rank>10</rank>
+                  </item>
+                  <item id="org_id">
+                    <rank>20</rank>
+                  </item>
+                  <item id="status">
+                    <rank>30</rank>
+                  </item>
+                  <item id="business_criticity">
+                    <rank>40</rank>
+                  </item>
+                  <item id="location_id">
+                    <rank>50</rank>
+                  </item>
+                  <item id="brand_id">
+                    <rank>60</rank>
+                  </item>
+                  <item id="model_id">
+                    <rank>70</rank>
+                  </item>
+                  <item id="serialnumber">
+                    <rank>80</rank>
+                  </item>
+                  <item id="asset_number">
+                    <rank>90</rank>
+                  </item>
+                  <item id="move2production">
+                    <rank>100</rank>
+                  </item>
+                  <item id="purchase_date">
+                    <rank>110</rank>
+                  </item>
+                  <item id="end_of_warranty">
+                    <rank>120</rank>
+                  </item>
+                  <item id="description">
+                    <rank>130</rank>
+                  </item>
+                  <item id="contacts_list">
+                    <rank>140</rank>
+                  </item>
+                  <item id="documents_list">
+                    <rank>150</rank>
+                  </item>
+                  <item id="networkdevice_list">
+                    <rank>160</rank>
+                  </item>
+                </items>
+              </details>
+              <search>
+                <items>
+                  <item id="name">
+                    <rank>10</rank>
+                  </item>
+                  <item id="org_id">
+                    <rank>20</rank>
+                  </item>
+                  <item id="status">
+                    <rank>30</rank>
+                  </item>
+                  <item id="business_criticity">
+                    <rank>40</rank>
+                  </item>
+                  <item id="location_id">
+                    <rank>50</rank>
+                  </item>
+                  <item id="brand_id">
+                    <rank>60</rank>
+                  </item>
+                  <item id="model_id">
+                    <rank>70</rank>
+                  </item>
+                  <item id="serialnumber">
+                    <rank>80</rank>
+                  </item>
+                  <item id="asset_number">
+                    <rank>90</rank>
+                  </item>
+                  <item id="move2production">
+                    <rank>100</rank>
+                  </item>
+                  <item id="purchase_date">
+                    <rank>110</rank>
+                  </item>
+                  <item id="end_of_warranty">
+                    <rank>120</rank>
+                  </item>
+                </items>
+              </search>
+              <list>
+                <items>
+                  <item id="finalclass">
+                    <rank>10</rank>
+                  </item>
+                  <item id="org_id">
+                    <rank>20</rank>
+                  </item>
+                  <item id="status">
+                    <rank>30</rank>
+                  </item>
+                  <item id="business_criticity">
+                    <rank>40</rank>
+                  </item>
+                  <item id="location_id">
+                    <rank>50</rank>
+                  </item>
+                  <item id="brand_id">
+                    <rank>60</rank>
+                  </item>
+                  <item id="model_id">
+                    <rank>70</rank>
+                  </item>
+                  <item id="serialnumber">
+                    <rank>80</rank>
+                  </item>
+                </items>
+              </list>
+            </presentation>
+		</class>
+	</classes>
+	<menus>
+		<menu id="ConfigManagementOverview" xsi:type="DashboardMenuNode" _delta="must_exist">
+			<definition>
+				<cells>
+					<cell id="2">
+						<dashlets>
+							<dashlet id="901_bankterminal" xsi:type="DashletBadge" _delta="define">
+								<rank>901</rank>
+								<class>BankTerminal</class>
+							</dashlet>
+						</dashlets>
+					</cell>
+				</cells>
+			</definition>
+		</menu>
+	</menus>
+</itop_design>
